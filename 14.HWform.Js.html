@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    function formvalidate()
+    {
+      var a=document.getElementById("n1").value;     
+       var b=document.getElementById("n2").value;
+      var c=document.getElementById("n3").value;
+      var d=document.getElementById("n4").value;
+      var e=document.getElementById("n5").value;
+
+if(a.length>2 && a.length<15)
+{
+alert("please enter valid name");
+return false;
+}
+else
+return true;
+    }
+  </script>
+  <form  onsubmit ="return formvalidate()" action="forformvalidation.html">
+    <h1>Application Form</h1>
+    Full Name <input type="text"id="n1"><br><br>
+    Email Address: <input type="text"id="n2"><br><br>
+    Mobile Number <input type="text"id="n3"><br><br>
+
+  <label>Country</label>
+<select name="Country" id="">
+    <option value=""id="n4">Select</option>
+    <option value=""id="n4">India</option>   
+     <option value=""id="n4">America</option>
+    <option value=""id="n4">China</option>
+    <option value=""id="n4">United Kingdom</option>
+</select>
+<div>
+  <br>
+Gender <br>
+ Male<input type="radio" name="mygender" id="">Female <input type="radio"name="mygender"><br>
+</div>
+<br>
+ Hobbies(Optional) <br>
+ Sports<input type="checkbox" >
+ Movies<input type="checkbox" >
+ Music<input type="checkbox">
+ <br>
+ <input type="Submit">
+ </form>
+</body> 
+</html>

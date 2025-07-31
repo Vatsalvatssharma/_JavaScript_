@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+         
+  function calculateTemp {
+var fahrenheit = document.getElementById("far").value;
+var result = (fahrenheit-32)*5/9;
+document.getElementById("result").innerHTML="The value in calsius is:" + result;
+  }
+  
+    </script>
+</head>
+<body>
+    <h1 id="result"></h1>
+   Enter fahrenheit: <input type="text" id ="fah"><br>
+  <input type="button" value="calculate"
+   onclick="calculateTemp()">
+
+</body>
+</html>-------+

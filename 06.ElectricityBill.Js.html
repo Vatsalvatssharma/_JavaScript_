@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function calculatebill()
+    {
+        var ID=document.getElementById("id").value;
+        var name = document.getElementById("name").value;
+        var unit =Number(document.getElementById("unit").value);
+var resultobj = document.getElementById("result");
+
+var amount;
+if(unit>=0 && unit<200)
+{
+    amount =unit*3.20;
+}
+else if(unit>=200 && unit<400)
+{
+    amount =unit*5.50;
+}
+else if(unit>=400 && unit<600)
+{
+    amount =unit*8.80;
+}
+else if(unit>=600)
+{
+    amount =unit*9;
+}
+else
+{
+resultobj.innerHTML="The amount can't be negative";
+return;
+}
+resultobj.innerHTML="The expected amount is:"+amount+"<br>";
+if(amount>=1000)
+{
+    resultobj.innerHTML+="The surcharge is:"+(amount*0.15)+"<br>";
+    amount =amount+amount*0.15;
+}
+if(amount<200)
+{
+    resultobj.innerHTML="The minimum bill should not be less than 200 is:";
+    amount =200;
+}
+resultobj.innerHTML="The final amount to be paid:"+amount;
+ }
+ 
+</script>
+
+</head>
+<body>
+    <h1 id="result" >
+</h1>
+ID:<input type="text" id="id"><br>
+name:<input type="text" id="name"><br>    
+unit : <input type="text" id="unit">
+<button onclick ="calcu+++latebill()">calculate</button>
+
+</body>
+</html>
